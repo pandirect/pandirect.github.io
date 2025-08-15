@@ -1,32 +1,30 @@
 {
-  "name": "pandirect-landing",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "pandirect",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "sirv-cli": "^0.4.4"
+    "@sentry/cli": "^2.52.0",
+    "motion": "^12.23.12",
+    "next": "15.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-imask": "^7.6.1"
   },
   "devDependencies": {
-    "@rollup/plugin-image": "^2.0.4",
-    "@rollup/plugin-node-resolve": "^6.1.0",
-    "imask": "^6.0.3",
-    "node-sass": "^4.13.1",
-    "rollup": "^1.31.0",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-sass": "^1.2.2",
-    "rollup-plugin-svelte": "^5.0.3",
-    "rollup-plugin-terser": "^5.2.0",
-    "svelte": "^3.20.1",
-    "svelte-preprocess-sass": "^0.2.0"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "sirv public --dev --port 4200 --host 0.0.0.0"
-  },
-  "author": "",
-  "license": "ISC"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
 }

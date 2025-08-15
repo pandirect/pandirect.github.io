@@ -1,0 +1,49 @@
+.button {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 29px;
+    border: 2px solid var(--white);
+    background: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.button:hover {
+    color: var(--blue);
+}
+
+.button_outlined,
+.button_contained {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+.button_outlined:hover,
+.button_contained:hover {
+    box-shadow: 0 4px 12px 4px rgba(34, 144, 255, 0.2);
+}
+
+.button_outlined {
+    background: var(--white);
+}
+
+.button_outlined:hover {
+    color: var(--blue);
+}
+
+.button_contained {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.button_contained:hover {
+    color: var(--white);
+}
+
+.button_disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}

@@ -1,0 +1,34 @@
+@import url("form.css");
+@import url("reset.css");
+@import url("colors.css");
+
+body {
+    line-height: 1.5;
+    position: relative;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    li, a {
+        width: 100%;
+    }
+
+    a {
+        padding: .5rem 1rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 5px;
+}
+

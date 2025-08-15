@@ -1,0 +1,258 @@
+.main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 900px;
+    background: url('/assets/background.svg') no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.main__text {
+    margin: auto auto auto 6%;
+    max-width: 600px;
+    color: var(--white);
+    z-index: 2;
+}
+
+.main__title {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main__description_big {
+    font-family: "SFDisplay-Semibold", sans-serif;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 10px 0 15px;
+}
+
+.main__description_small {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.main__image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 700px;
+    height: 600px;
+    background: url('/assets/main/lines.svg') no-repeat;
+    background-size: 97%;
+}
+
+.illustrate {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1550px) {
+    .illustrate {
+        transition: all 0.25s;
+        opacity: 0.75;
+    }
+}
+
+/*Services*/
+.serviceGroups {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.serviceGroups__name {
+    font-family: "SFDisplay-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 5px;
+}
+
+.service {
+    display: flex;
+}
+
+.service__image {
+    margin: 0 70px;
+    width: 600px;
+}
+
+.service__info {
+    padding-right: 60px;
+}
+
+.service__title {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 36px;
+    color: var(--black);
+    line-height: 42px;
+    margin-bottom: 30px;
+}
+
+.service__description {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 18px;
+    color: var(--bright-grey);
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+
+.service__items {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--black);
+    list-style-type: circle;
+    margin-left: 30px;
+}
+
+.service__items > li {
+    margin: 0 0 20px;
+}
+
+/* Анимация fade */
+.fadeIn {
+    animation: fadeIn 300ms ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1600px) {
+    .service__image {
+        margin: 0 30px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .service__image {
+        display: none;
+    }
+
+    .service__info {
+        padding: 0;
+    }
+
+    .serviceGroups {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .serviceGroups__name {
+        margin: 10px 5px;
+    }
+}
+
+/*About*/
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 80px;
+    background-image: url(/assets/about/map.svg);
+    background-repeat: no-repeat;
+    max-width: 1100px;
+}
+
+.aboutInfo {
+    max-width: 550px;
+    margin-right: 50px;
+}
+
+.aboutInfo__title {
+    font-family: "SFDisplay-Light", sans-serif;
+    color: var(--black);
+    font-size: 42px;
+    line-height: 45px;
+}
+
+.aboutInfo__description {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 18px;
+    color: var(--bright-grey);
+    line-height: 31px;
+    margin: 30px 0 38px;
+}
+
+.aboutForm {
+    max-width: 500px;
+}
+
+.aboutForm__submit {
+    margin-top: 20px;
+}
+
+.form__label {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.form__input,
+.form__textarea {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form__input {
+    padding: 8px;
+}
+
+.form__textarea {
+    padding: 8px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+@media (max-width: 1410px) {
+    .aboutInfo,
+    .aboutForm {
+        width: 100%;
+        max-width: 640px;
+        padding: 0;
+    }
+
+    .aboutInfo {
+        margin: 0 auto 30px;
+    }
+
+    .aboutForm {
+        margin: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .form__line {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        display: flex;
+    }
+
+    .form__field {
+        width: 100%;
+        margin: auto;
+    }
+
+    .form__field:first-child,
+    .form__field:last-child {
+        width: 100%;
+        margin: auto;
+    }
+}

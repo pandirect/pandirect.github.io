@@ -1,0 +1,30 @@
+.sidebar {
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+
+.sidebar__item {
+    position: relative;
+    display: flex;
+}
+
+.sidebar__link {
+    border-left: 6px solid var(--invisible);
+    display: block;
+    padding-left: 50px;
+    margin: 8px 0;
+    font-size: 1em;
+    transition: .25s;
+    color: var(--grey);
+}
+
+.sidebar__link:hover {
+    color: var(--blue);
+}
+
+.sidebar__link.active {
+    border-left-color: var(--blue);
+    color: var(--blue);
+    font-family: "Roboto-Medium", sans-serif;
+}
