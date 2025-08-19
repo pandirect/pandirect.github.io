@@ -1,6 +1,7 @@
 @import url("form.css");
 @import url("reset.css");
 @import url("colors.css");
+@import url("fonts.css");
 
 body {
     line-height: 1.5;

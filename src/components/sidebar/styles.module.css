@@ -1,30 +1,101 @@
 .sidebar {
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 240px;
+    box-shadow: 0 0 32px 16px rgba(0, 0, 0, 0.05);
+    z-index: 3;
+}
+
+.sidebar__logo {
+    display: flex;
+    margin: 50px auto 0;
+    justify-content: center;
+}
+
+.sidebar__navigation {
+    display: flex;
     margin: auto;
     width: 100%;
 }
 
-.sidebar__item {
+.sidebarMobile,
+.sidebar__contact {
+    display: none;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.navigation__item {
     position: relative;
     display: flex;
 }
 
-.sidebar__link {
-    border-left: 6px solid var(--invisible);
+.navigation__link {
+    font-family: 'Roboto-Regular', sans-serif;
+    color: var(--grey, #666);
+    border-left: 6px solid var(--invisible, transparent);
     display: block;
     padding-left: 50px;
     margin: 8px 0;
     font-size: 1em;
-    transition: .25s;
-    color: var(--grey);
+    transition: all 0.25s;
+    text-decoration: none;
 }
 
-.sidebar__link:hover {
-    color: var(--blue);
+.navigation__link:hover {
+    color: var(--blue, #007bff);
 }
 
-.sidebar__link.active {
-    border-left-color: var(--blue);
-    color: var(--blue);
-    font-family: "Roboto-Medium", sans-serif;
+.navigation__link_active {
+    border-left-color: var(--blue, #007bff);
+    color: var(--blue, #007bff);
+    font-family: 'Roboto-Medium', sans-serif;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        box-shadow: none;
+        transition: all 0.25s;
+    }
+
+    .sidebar.invert {
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar__logo {
+        display: none;
+    }
+
+    .sidebar__navigation {
+        display: none;
+    }
+
+    .sidebarMobile {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 40px 30px 30px;
+    }
+
+    .sidebar__hamburger {
+        cursor: pointer;
+    }
+
+    .sidebar.open {
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+
+    .sidebar.open .sidebar__navigation,
+    .sidebar.open .sidebar__contact {
+        display: block;
+    }
 }

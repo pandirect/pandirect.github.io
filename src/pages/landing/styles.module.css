@@ -196,34 +196,9 @@
     margin-top: 20px;
 }
 
-.form__label {
-    font-family: "SFDisplay-Light", sans-serif;
-    font-size: 12px;
-    line-height: 14px;
-}
-
-.form__input,
-.form__textarea {
-    font-family: "SFDisplay-Light", sans-serif;
-    font-size: 16px;
-    line-height: 21px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.form__input {
-    padding: 8px;
-}
-
-.form__textarea {
-    padding: 8px;
-    resize: vertical;
-    min-height: 100px;
-}
-
 @media (max-width: 1410px) {
-    .aboutInfo,
-    .aboutForm {
+    .about .aboutInfo,
+    .about .aboutForm {
         width: 100%;
         max-width: 640px;
         padding: 0;
@@ -238,21 +213,57 @@
     }
 }
 
-@media (max-width: 550px) {
-    .form__line {
-        flex-wrap: wrap;
-        margin-bottom: 30px;
-        display: flex;
+/*Contacts*/
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 150px auto 0;
+}
+
+.contacts__item {
+    font-family: "SFDisplay-Light", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 30px;
+}
+
+.contacts__item[data-type="phone"]::before {
+    content: "";
+    height: 21px;
+    width: 21px;
+    display: block;
+    float: left;
+    background-image: url("/assets/about/phone.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 21px 21px;
+    margin-right: 10px;
+}
+
+.contacts__item[data-type="mail"]::before {
+    content: "";
+    height: 21px;
+    width: 21px;
+    display: block;
+    float: left;
+    background-image: url("/assets/about/mail.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 21px 21px;
+    margin-right: 10px;
+}
+
+.contacts__item a {
+    color: var(--bright-grey);
+}
+
+@media (max-width: 900px) {
+    .contacts {
+        justify-content: left;
     }
 
-    .form__field {
-        width: 100%;
-        margin: auto;
-    }
-
-    .form__field:first-child,
-    .form__field:last-child {
-        width: 100%;
-        margin: auto;
+    .contacts__item {
+        margin: 10px 30px;
     }
 }

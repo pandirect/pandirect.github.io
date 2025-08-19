@@ -12,3 +12,9 @@
     max-width: calc(100% - 240px);
     overflow-y: auto;
 }
+
+@media (max-width: 900px) {
+    .content {
+        max-width: 100%;
+    }
+}

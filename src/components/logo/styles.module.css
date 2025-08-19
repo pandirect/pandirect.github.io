@@ -1,5 +1,9 @@
-.logo {
-    display: flex;
-    margin: 50px auto 0;
-    justify-content: center;
+.logoMobile {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .logoMobile {
+        display: block;
+    }
 }

@@ -1,32 +1,64 @@
-import Menu from "@/components/menu/Menu";
-import MainSection from "@/pages/landing/MainSection";
-import Services from "@/pages/landing/Services";
-import About from "@/pages/landing/About";
-import Footer from "@/components/footer/Footer";
-import Section from "@/components/section/Section";
-import styles from "./styles.module.css";
-import Main from "@/components/main/Main";
+'use client'
+
+import { useState, useRef, useEffect } from 'react';
+import { MainSection, Services, About, Contacts } from "@/pages/landing";
+import { Footer } from '@components/footer';
+import { Section } from '@components/section';
+import { Main } from '@components/main';
+import { Sidebar } from '@components/sidebar';
+import { links } from '@models/links';
+import styles from './styles.module.css';
 
 export default function Landing() {
+    const [invert, setInvert] = useState(false);
+    const contentRef = useRef(null);
+    const mobileSidebarHeight = 96;
+
+    const onScroll = () => {
+        if (contentRef.current) {
+            const contentElement = contentRef.current;
+            const mainBlock = document.getElementById("main");
+            const heightOfMainBlock = mainBlock ? mainBlock.clientHeight : 0;
+            setInvert(contentElement.scrollTop + mobileSidebarHeight > heightOfMainBlock);
+
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                const distance = contentElement.scrollTop - section.offsetTop;
+                const anchor = section.getAttribute('id');
+                if (-30 < distance && distance < 30 && window.location.hash.slice(1) !== anchor) {
+                    window.location.hash = `#${anchor}`;
+                }
+            });
+        }
+    };
+
+    useEffect(() => {
+        const contentElement = contentRef.current;
+        if (contentElement) {
+            contentElement.addEventListener('scroll', onScroll);
+            return () => contentElement.removeEventListener('scroll', onScroll);
+        }
+    }, []);
+
     return (
         <div className={styles.layout}>
-            <Menu/>
-            <div className={styles.content}>
+            <Sidebar links={links} isInvert={invert} />
+            <div className={styles.content} ref={contentRef}>
                 <Main>
                     <Section id="main">
-                        <MainSection/>
+                        <MainSection />
                     </Section>
                     <Section id="services">
-                        <Services/>
+                        <Services />
                     </Section>
-                    <Section id="about" style={{maxWidth: '1200px'}}>
-                        <About/>
+                    <Section id="about" style={{ maxWidth: '1200px' }}>
+                        <About />
                     </Section>
                     <Section id="contacts">
-                        {/*<Contacts/>*/}
+                        <Contacts />
                     </Section>
                 </Main>
-                <Footer/>
+                <Footer />
             </div>
         </div>
     );

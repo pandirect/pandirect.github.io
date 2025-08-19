@@ -6,7 +6,7 @@ const MainSection = ({...rest}) => {
         <div className={styles.main} {...rest}>
             <div className={styles.main__text}>
                 <p className={styles.main__title}>Digital-агентство «Pandirect»</p>
-                <p className={`${styles.main__description} ${styles.main__description_big}`}>
+                <p className={`${styles.main__description_big}`}>
                     Многолетний опыт разработки web-проектов на службе Ваших идей
                 </p>
                 <p className={`${styles.main__description} ${styles.main__description_small}`}>

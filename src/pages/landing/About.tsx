@@ -44,7 +44,7 @@ const About = () => {
                     оказав бесплатную консультацию и предложив подходящие решения
                 </p>
             </div>
-            <div className="aboutForm">
+            <div className={styles.aboutForm}>
                 <form onSubmit={handleSubmit}>
                     <div className="form__line">
                         <div className="form__field">
@@ -84,7 +84,7 @@ const About = () => {
                 onChange={handleInputChange}
             ></textarea>
                     </div>
-                    <div className="aboutForm__submit">
+                    <div className={styles.aboutForm__submit}>
                         <Button variant="outlined" type="submit">
                             Отправить
                         </Button>
