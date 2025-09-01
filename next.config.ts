@@ -3,9 +3,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
-  output: 'standalone',
-  basePath: '/landing',
-  assetPrefix: '/landing/',
+  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
