@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "touch ./out/.nojekyll && gh-pages -d out -t --cname www.pandirect.ru",
+    "deploy": "touch ./out/.nojekyll && gh-pages -d out -t --cname pandirect.ru",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
