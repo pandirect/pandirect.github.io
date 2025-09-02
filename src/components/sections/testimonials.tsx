@@ -33,9 +33,9 @@ const Testimonials = () => {
     <section className="section-padding bg-secondary/20">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Что говорят клиенты?</h2>
           <p className="text-light-gray max-w-2xl mx-auto">
-            We are proud to have partnered with amazing clients. Here's what they think about our work.
+            Мы гордимся тем, что сотрудничаем с замечательными клиентами. Вот что они думают о нашей работе.
           </p>
         </ScrollFadeIn>
         

@@ -5,28 +5,28 @@ import { ScrollFadeIn } from '@/components/scroll-fade-in';
 const services = [
   {
     icon: Smartphone,
-    title: "Mobile App Development",
-    description: "Crafting intuitive and high-performance native and cross-platform mobile applications for iOS and Android."
+    title: "Разработка мобильных приложений",
+    description: "Создание интуитивно понятных и высокопроизводительных нативных и кроссплатформенных мобильных приложений для iOS и Android."
   },
   {
     icon: Globe,
-    title: "Web App Development",
-    description: "Building responsive, scalable, and secure web applications tailored to your specific business needs."
+    title: "Разработка веб-приложений",
+    description: "Создание адаптивных, масштабируемых и безопасных веб-приложений с учетом ваших конкретных бизнес-потребностей."
   },
   {
     icon: PenTool,
-    title: "UI/UX Design",
-    description: "Creating beautiful, user-centric designs that enhance usability and provide an engaging user experience."
+    title: "UI/UX Дизайн",
+    description: "Создание красивых, ориентированных на пользователя дизайнов, которые повышают удобство использования и обеспечивают привлекательный пользовательский опыт."
   },
   {
     icon: LifeBuoy,
-    title: "Support & Maintenance",
-    description: "Providing ongoing support and maintenance to ensure your applications run smoothly and stay up-to-date."
+    title: "Поддержка & Техническое обслуживание",
+    description: "Обеспечение постоянной поддержки и сопровождения для обеспечения бесперебойной работы ваших приложений и их актуальности."
   },
   {
     icon: Briefcase,
-    title: "IT Outsourcing",
-    description: "Augment your team with our expert developers and engineers to accelerate your project development."
+    title: "ИТ-аутсорсинг",
+    description: "Пополните свою команду нашими опытными разработчиками и инженерами, чтобы ускорить разработку вашего проекта."
   },
 ];
 
@@ -35,8 +35,8 @@ const Services = () => {
     <section id="services" className="section-padding bg-secondary/20">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
-          <p className="text-light-gray max-w-2xl mx-auto">We offer a comprehensive suite of services to bring your digital products to life, from initial concept to ongoing support.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши основные услуги</h2>
+          <p className="text-light-gray max-w-2xl mx-auto">Мы предлагаем полный набор услуг для воплощения ваших цифровых продуктов в жизнь - от первоначальной концепции до постоянной поддержки.</p>
         </ScrollFadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
