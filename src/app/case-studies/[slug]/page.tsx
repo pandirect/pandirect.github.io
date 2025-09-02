@@ -12,7 +12,21 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import ReactMarkdown from 'react-markdown';
 
-export default async function CaseStudyDetailPage({ params }: { params: { slug: string } }) {
+export async function generateStaticParams() {
+  const studies = await getCaseStudies();
+
+  return studies.map((study) => ({
+    slug: study.slug,
+  }));
+}
+
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function CaseStudyDetailPage({ params }: Props) {
   const caseStudies = await getCaseStudies();
 
   const { slug } = params;
