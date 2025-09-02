@@ -1,0 +1,20 @@
+{
+  "header": {
+  },
+  "main": {
+  },
+  "cases": {
+    "title": "<Вставь сюда текст>",
+    "description": "<Вставь сюда текст>",
+    "categories": {
+      "all": "Все",
+      "web": "Веб-разработка",
+      "mobile": "Мобильные приложения",
+      "design": "UI/UX дизайн",
+      "ecommerce": "E-commerce",
+      "analytics": "Аналитика данных"
+    }
+  },
+  "footer": {
+  }
+}
