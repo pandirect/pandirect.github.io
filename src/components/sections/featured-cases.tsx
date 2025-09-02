@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getCaseStudies } from '@/lib/case-studies-data';
+import { getPreviewCaseStudies } from '@/lib/case-studies-data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ScrollFadeIn } from '@/components/scroll-fade-in';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
-const FeaturedCases = () => {
-  const featuredStudies = getCaseStudies().slice(0, 3);
+const FeaturedCases = async () => {
+  const featuredStudies = await getPreviewCaseStudies();
 
   return (
     <section id="portfolio" className="section-padding bg-background">
