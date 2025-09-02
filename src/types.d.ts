@@ -8,8 +8,7 @@ type TCase = {
     result: string;
   };
   description: string;
-  // TODO: set TCategoryKey as type
-  category: string;
+  category: TCategoryKey;
   projectType: string;
   src: string;
   hint: string;

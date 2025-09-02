@@ -65,7 +65,7 @@ const Hero = ({ showContent = true }: HeroProps) => {
                <Button className="btn-gradient">Консультация</Button>
             </div>
             <div className="md:hidden">
-              <Button onClick={() => setIsMenuOpen(!isMenuOpen)} variant="ghost" size="icon">
+              <Button onClick={() => setIsMenuOpen(!isMenuOpen)} variant="secondary" size="icon">
                 <Menu />
                 <span className="sr-only">Открыть меню</span>
               </Button>
@@ -81,7 +81,7 @@ const Hero = ({ showContent = true }: HeroProps) => {
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-20">
             <Logo />
-            <Button onClick={() => setIsMenuOpen(false)} variant="ghost" size="icon">
+            <Button onClick={() => setIsMenuOpen(false)} variant="secondary" size="icon">
               <X />
               <span className="sr-only">Close menu</span>
             </Button>
