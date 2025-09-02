@@ -36,8 +36,8 @@ const CaseStudiesPage: React.FC<Props> = ({ cases }) => {
     <section id="case-studies" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">{t('cases.title')}</h1>
-          <p className="text-light-gray max-w-3xl mx-auto">{t('cases.description')}</p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">{t('common.cases.title')}</h1>
+          <p className="text-light-gray max-w-3xl mx-auto">{t('common.cases.description')}</p>
         </ScrollFadeIn>
 
         <ScrollFadeIn delay={200} className="mb-12">
@@ -54,7 +54,7 @@ const CaseStudiesPage: React.FC<Props> = ({ cases }) => {
                   )}
                 >
                   <Icon className="mr-2 h-4 w-4"/>
-                  {t(`cases.categories.${key}`)}
+                  {t(`common.cases.categories.${key}`)}
                 </Button>
               );
             })}

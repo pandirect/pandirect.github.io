@@ -14,7 +14,7 @@ const FeaturedCases = async () => {
     <section id="portfolio" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши лучшие работа</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">"Протестить прокид"</h2>
           <p className="text-light-gray max-w-2xl mx-auto">
             Наши любимые проекты, которые демонстрируют наш опыт и стремление к достижению результатов.
           </p>
