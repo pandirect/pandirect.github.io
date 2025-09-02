@@ -36,10 +36,10 @@ const Hero = ({ showContent = true }: HeroProps) => {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { href: '/#about', label: 'About Us' },
-    { href: '/#services', label: 'Services' },
-    { href: '/case-studies', label: 'Case Studies' },
-    { href: '/#contact', label: 'Contact' },
+    { href: '/#about', label: 'О нас' },
+    { href: '/#services', label: 'Сервисы' },
+    { href: '/case-studies', label: 'Кейсы' },
+    { href: '/#contact', label: 'Контакты' },
   ];
 
   return (
@@ -62,12 +62,12 @@ const Hero = ({ showContent = true }: HeroProps) => {
               ))}
             </nav>
             <div className="hidden md:block">
-               <Button className="btn-gradient">Request Consultation</Button>
+               <Button className="btn-gradient">Консультация</Button>
             </div>
             <div className="md:hidden">
               <Button onClick={() => setIsMenuOpen(!isMenuOpen)} variant="ghost" size="icon">
                 <Menu />
-                <span className="sr-only">Open menu</span>
+                <span className="sr-only">Открыть меню</span>
               </Button>
             </div>
           </div>
@@ -108,20 +108,20 @@ const Hero = ({ showContent = true }: HeroProps) => {
           <div className="container mx-auto px-4 text-center text-white relative">
             <ScrollFadeIn>
               <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                We develop mobile and web applications for business growth.
+                Разрабатываем мобильные и веб-приложения для роста вашего бизнеса.
               </h1>
               <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-200 mb-10" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.2)' }}>
-                From concept to launch, our expert team delivers innovative and scalable solutions that drive results and elevate your brand.
+                От концепции до запуска наша команда экспертов создаёт инновационные и масштабируемые решения, которые приносят результаты и усиливают ваш бренд.
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
                 <Link href="#contact">
                   <Button size="lg" className="btn-gradient text-lg px-8 w-56">
-                    Request Consultation
+                    Консультация
                   </Button>
                 </Link>
                 <Link href="/case-studies">
                   <Button size="lg" variant="outline" className="text-lg px-8 w-56 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300">
-                    View Our Work
+                    Наши работы
                   </Button>
                 </Link>
               </div>

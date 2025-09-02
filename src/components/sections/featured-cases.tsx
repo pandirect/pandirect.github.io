@@ -1,22 +1,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getCaseStudies } from '@/lib/case-studies-data';
+import { getPreviewCaseStudies } from '@/lib/case-studies-data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ScrollFadeIn } from '@/components/scroll-fade-in';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
-const FeaturedCases = () => {
-  const featuredStudies = getCaseStudies().slice(0, 3);
+const FeaturedCases = async () => {
+  const featuredStudies = await getPreviewCaseStudies();
 
   return (
     <section id="portfolio" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Featured Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши лучшие работа</h2>
           <p className="text-light-gray max-w-2xl mx-auto">
-            Here are a few of our favorite projects that showcase our expertise and commitment to delivering exceptional results.
+            Наши любимые проекты, которые демонстрируют наш опыт и стремление к достижению результатов.
           </p>
         </ScrollFadeIn>
 
@@ -55,7 +55,7 @@ const FeaturedCases = () => {
         <ScrollFadeIn className="text-center mt-12">
           <Link href="/case-studies">
             <Button variant="outline" size="lg" className="text-lg">
-              View All Case Studies
+              Просмотреть все работы
             </Button>
           </Link>
         </ScrollFadeIn>

@@ -9,23 +9,23 @@ import { cn } from '@/lib/utils';
 const workflowSteps = [
   {
     icon: Search,
-    title: "Analysis",
-    description: "We start by diving deep into your business goals, target audience, and project requirements. This phase involves comprehensive market research, competitor analysis, and creating a detailed project roadmap to ensure a solid foundation for success."
+    title: "Анализ",
+    description: "Мы начинаем с глубокого изучения ваших бизнес-целей, целевой аудитории и требований к проекту. Этот этап включает в себя всестороннее исследование рынка, анализ конкурентов и создание подробной дорожной карты проекта, которая обеспечит прочную основу для успеха."
   },
   {
     icon: PenTool,
-    title: "Design",
-    description: "Our design team crafts intuitive UI/UX wireframes and high-fidelity mockups. We focus on creating a seamless and engaging user experience that is both aesthetically pleasing and functionally robust, ensuring your brand's identity shines through."
+    title: "Дизайн",
+    description: "Наша команда дизайнеров разрабатывает интуитивно понятные интерфейсы UI / UX и высокоточные макеты. Мы фокусируемся на создании бесшовного и привлекательного пользовательского интерфейса, который будет одновременно эстетичным и функционально надежным, подчеркивая индивидуальность вашего бренда."
   },
   {
     icon: Code,
-    title: "Development",
-    description: "Our expert developers bring the designs to life with clean, efficient, and scalable code. We follow agile methodologies, providing regular updates and builds to ensure transparency and flexibility throughout the development lifecycle."
+    title: "Разработка",
+    description: "Наши опытные разработчики воплощают проекты в жизнь с помощью чистого, эффективного и масштабируемого кода. Мы придерживаемся гибких методологий, предоставляя регулярные обновления и сборки для обеспечения прозрачности и гибкости на протяжении всего жизненного цикла разработки."
   },
   {
     icon: Rocket,
-    title: "Launch & Support",
-    description: "After rigorous testing, we deploy your application to the market. Our commitment doesn't end at launch; we provide ongoing support and maintenance to ensure your application runs smoothly, stays secure, and evolves with your business needs."
+    title: "Запуск & Поддержка",
+    description: "После тщательного тестирования мы выводим ваше приложение на рынок. Наши обязательства не заканчиваются с запуском; мы обеспечиваем постоянную поддержку и сопровождение, чтобы ваше приложение работало бесперебойно, оставалось безопасным и развивалось в соответствии с потребностями вашего бизнеса."
   }
 ];
 
@@ -37,9 +37,9 @@ const Workflow = () => {
     <section className="section-padding bg-secondary/20">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Work Process</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Рабочий процесс</h2>
           <p className="text-light-gray max-w-2xl mx-auto">
-            We follow a structured and transparent process to ensure the successful delivery of your project.
+            Мы следуем структурированному и открытому процессу разработки, чтобы обеспечить успешную реализацию вашего проекта.
           </p>
         </ScrollFadeIn>
         
@@ -84,7 +84,7 @@ const Workflow = () => {
                     <CurrentStepIcon className="h-8 w-8"/>
                   </div>
                   <div className="hidden md:block">
-                    <p className="text-sm text-primary font-semibold">Step {activeStep + 1}</p>
+                    <p className="text-sm text-primary font-semibold">Шаг {activeStep + 1}</p>
                     <h3 className="text-2xl font-bold mb-2">{workflowSteps[activeStep].title}</h3>
                   </div>
                   <p className="text-light-gray">{workflowSteps[activeStep].description}</p>

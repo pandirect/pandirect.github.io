@@ -4,9 +4,9 @@ import { CheckCircle } from 'lucide-react';
 
 const About = () => {
   const values = [
-    { title: 'Quality First', description: 'We deliver pixel-perfect results that exceed expectations.' },
-    { title: 'On-Time Delivery', description: 'Our agile process ensures we meet every deadline, every time.' },
-    { title: 'Full Transparency', description: 'You are always in the loop with clear communication and reporting.' },
+    { title: 'Качество превыше всего', description: 'Мы обеспечиваем безупречный результат, который превосходит ожидания.' },
+    { title: 'Своевременная разработка', description: 'Наш гибкий процесс гарантирует соблюдение каждого срока, каждый раз.' },
+    { title: 'Полная прозрачность', description: 'Вы всегда в курсе процесса разработки, благодаря чёткой коммуникации и отчётности.' },
   ];
 
   return (
@@ -26,10 +26,10 @@ const About = () => {
           </ScrollFadeIn>
           <ScrollFadeIn delay={200}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Your Trusted Partner in <span className="text-primary">Digital Innovation</span>
+              Ваш надёжный партнёр в сфере <span className="text-primary">цифровых инноваций</span>
             </h2>
             <p className="text-light-gray mb-8">
-              At Apex Apps, we are more than just a development agency. We are a team of passionate creators, thinkers, and problem-solvers dedicated to transforming your ideas into powerful digital realities. Our commitment to excellence drives us to build applications that are not only functional but also beautiful and intuitive.
+              В pandirect мы — больше чем просто агентство по разработке. Мы команда увлечённых создателей, мыслителей и решателей задач, посвящённых тому, чтобы превращать ваши идеи в мощные цифровые решения. Наша приверженность совершенству побуждает нас создавать приложения, которые не только функциональны, но и красивы и интуитивно понятны.
             </p>
             <div className="space-y-6">
               {values.map((value, index) => (

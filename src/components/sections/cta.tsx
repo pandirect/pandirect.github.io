@@ -8,13 +8,13 @@ const Cta = () => {
         <ScrollFadeIn>
           <div className="bg-secondary/20 rounded-2xl p-10 md:p-16 border border-secondary">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to discuss your project?
+              Готовы обсудить ваш проект?
             </h2>
             <p className="text-light-gray max-w-2xl mx-auto mb-8">
-              Let's turn your idea into a reality. Contact us today for a free consultation and let's build something amazing together.
+              После тщательного тестирования мы выводим ваше приложение на рынок. Наши обязательства не заканчиваются с запуском; мы обеспечиваем постоянную поддержку и сопровождение, чтобы ваше приложение работало бесперебойно, оставалось безопасным и развивалось в соответствии с потребностями вашего бизнеса.
             </p>
             <Button size="lg" className="btn-gradient text-lg px-8 py-6">
-              Submit Request
+              Обсудить
             </Button>
           </div>
         </ScrollFadeIn>

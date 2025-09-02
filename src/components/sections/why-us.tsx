@@ -5,23 +5,23 @@ import { ScrollFadeIn } from '@/components/scroll-fade-in';
 const features = [
   {
     icon: UsersRound,
-    title: "Experienced Team",
-    description: "Our team consists of skilled professionals with years of experience in the tech industry."
+    title: "Опытная команда",
+    description: "Наша команда состоит из квалифицированных специалистов с многолетним опытом работы в сфере информационных технологий."
   },
   {
     icon: GitBranch,
-    title: "Transparent Process",
-    description: "We believe in clear communication and keep you updated at every stage of the development."
+    title: "Прозрачный процесс",
+    description: "Мы верим в четкую коммуникацию и держим вас в курсе событий на каждом этапе разработки."
   },
   {
     icon: Zap,
-    title: "Flexible Engagement",
-    description: "We offer flexible engagement models to suit your project needs and budget."
+    title: "Гибкое взаимодействие",
+    description: "Мы предлагаем гибкие модели взаимодействия в соответствии с потребностями вашего проекта и бюджетом."
   },
   {
     icon: Clock,
-    title: "24/7 Support",
-    description: "Our dedicated support team is available around the clock to assist you with any issues."
+    title: "Поддержка 24/7",
+    description: "Наша специальная служба поддержки доступна круглосуточно, чтобы помочь вам в решении любых вопросов."
   },
 ];
 
@@ -30,9 +30,9 @@ const WhyUs = () => {
     <section className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Apex Apps?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Почему выбирают pandirect?</h2>
           <p className="text-light-gray max-w-2xl mx-auto">
-            We combine technology and expertise to deliver outstanding results. Here’s what sets us apart.
+            Мы объединяем технологии и опыт для достижения выдающихся результатов. Вот что отличает нас от других.
           </p>
         </ScrollFadeIn>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
