@@ -19,13 +19,7 @@ type TCase = {
   challenge: string;
   solution: string;
   results: string;
-  testimonial?: {
-    name: string;
-    title: string;
-    quote: string;
-    avatar: string;
-    initials: string;
-  };
+  testimonial?: TTestimonial;
 };
 
 type TCategoryKey = 'all' | 'web' | 'mobile' | 'design' | 'ecommerce' | 'analytics';
@@ -34,3 +28,12 @@ type TCategory = {
   key: CategoryKey;
   icon: React.ComponentType<any>;
 };
+
+type TTestimonial = {
+  client: string;
+  post: string;
+  text: string;
+  fullText?: string;
+  avatar: string;
+  initials: string;
+}

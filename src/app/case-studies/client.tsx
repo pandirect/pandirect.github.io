@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,8 +24,8 @@ type Props = {
   cases: TCase[];
 };
 
-const CaseStudiesPage: React.FC<Props> = ({ cases }) => {
-  const t = useTranslations();
+const CasesClient: React.FC<Props> = ({ cases }) => {
+  const t = useTranslations('common');
 
   const [activeCategory, setActiveCategory] = useState<TCategoryKey>('all');
 
@@ -36,8 +37,8 @@ const CaseStudiesPage: React.FC<Props> = ({ cases }) => {
     <section id="case-studies" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">{t('common.cases.title')}</h1>
-          <p className="text-light-gray max-w-3xl mx-auto">{t('common.cases.description')}</p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">{t('cases.title')}</h1>
+          <p className="text-light-gray max-w-3xl mx-auto">{t('cases.description')}</p>
         </ScrollFadeIn>
 
         <ScrollFadeIn delay={200} className="mb-12">
@@ -54,7 +55,7 @@ const CaseStudiesPage: React.FC<Props> = ({ cases }) => {
                   )}
                 >
                   <Icon className="mr-2 h-4 w-4"/>
-                  {t(`common.cases.categories.${key}`)}
+                  {t(`cases.categories.${key}`)}
                 </Button>
               );
             })}
@@ -93,7 +94,7 @@ const CaseStudiesPage: React.FC<Props> = ({ cases }) => {
 
                     <div
                       className="inline-flex items-center text-primary font-semibold group-hover:underline mt-auto pt-4 border-t border-secondary">
-                      Смотреть кейс <ArrowRight
+                      {t('cases.buttons.show')} <ArrowRight
                       className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"/>
                     </div>
                   </CardContent>
@@ -107,4 +108,4 @@ const CaseStudiesPage: React.FC<Props> = ({ cases }) => {
   );
 };
 
-export default CaseStudiesPage;
+export default CasesClient;

@@ -69,6 +69,21 @@
         "design": "UI/UX дизайн",
         "ecommerce": "E-commerce",
         "analytics": "Аналитика данных"
+      },
+      "buttons": {
+        "all" : "Просмотреть все работы",
+        "show": "Смотреть кейс"
+      },
+      "detail": {
+        "industry": "Специализация",
+        "client": "Клиент",
+        "projectType": "Тип проекта",
+        "goal": "Задача",
+        "solution": "Наше решение",
+        "result": "Результат",
+        "feedback": "Отзыв клиента",
+        "technologies": "Используемые технологии",
+        "back": "Обратно к кейсам"
       }
     },
     "whyUs": {
