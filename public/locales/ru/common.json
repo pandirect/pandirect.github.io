@@ -173,11 +173,7 @@
       },
       "contact": {
         "title": "Контакты",
-        "items": [
-          "contact@pandirect.com",
-          "+1 (234) 567-890",
-          "123 Tech Avenue, Silicon Valley, CA"
-        ]
+        "mail": "contact@pandirect.ru"
       },
       "copyright": "Все права защищены."
     }

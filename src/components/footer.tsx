@@ -15,17 +15,17 @@ const Footer = () => {
                         <p className="mt-4 text-sm text-gray-400">
                             {t(`footer.brand.slogan`)}
                         </p>
-                        <div className="flex space-x-4 mt-6">
-                            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
-                                <Linkedin size={20}/>
-                            </Link>
-                            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
-                                <Send size={20}/>
-                            </Link>
-                            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
-                                <Youtube size={20}/>
-                            </Link>
-                        </div>
+                        {/*<div className="flex space-x-4 mt-6">*/}
+                        {/*    <Link href="#" className="text-gray-400 hover:text-primary transition-colors">*/}
+                        {/*        <Linkedin size={20}/>*/}
+                        {/*    </Link>*/}
+                        {/*    <Link href="#" className="text-gray-400 hover:text-primary transition-colors">*/}
+                        {/*        <Send size={20}/>*/}
+                        {/*    </Link>*/}
+                        {/*    <Link href="#" className="text-gray-400 hover:text-primary transition-colors">*/}
+                        {/*        <Youtube size={20}/>*/}
+                        {/*    </Link>*/}
+                        {/*</div>*/}
                     </div>
                     <div>
                         <h3 className="font-semibold text-white">
@@ -86,18 +86,10 @@ const Footer = () => {
                         <h3 className="font-semibold text-white">{t(`footer.contact.title`)}</h3>
                         <ul className="mt-4 space-y-2 text-sm text-gray-400">
                             <li>
-                                <a href="mailto:contact@pandirect.com"
+                                <a href={`mailto:${t('footer.contact.mail')}`}
                                    className="hover:text-white transition-colors">
-                                    {t(`footer.contact.items.0`)}
+                                    {t(`footer.contact.mail`)}
                                 </a>
-                            </li>
-                            <li>
-                                <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                                    {t(`footer.services.items.1`)}
-                                </a>
-                            </li>
-                            <li>
-                                {t(`footer.services.items.2`)}
                             </li>
                         </ul>
                     </div>
