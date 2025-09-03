@@ -1,9 +1,9 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy
 
 on:
   push:
     branches:
-      - main   # деплой при пуше в main
+      - master
 
 jobs:
   build-deploy:
