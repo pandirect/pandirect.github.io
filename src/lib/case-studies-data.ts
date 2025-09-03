@@ -10,3 +10,12 @@ export async function getPreviewCaseStudies() {
 
   return cases.slice(0, 3);
 }
+
+export async function getFeedbacks() {
+  const cases = await getCaseStudies();
+
+  return cases
+    .map(({ testimonial }) => testimonial)
+    .filter((value) => value != null)
+    .slice(0, 3);
+}
