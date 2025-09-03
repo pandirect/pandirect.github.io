@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ScrollFadeIn } from '@/components/scroll-fade-in';
-import { Briefcase, Code, Palette, Smartphone, Store } from 'lucide-react';
+import { Briefcase, ChartSpline, Code, Palette, Rocket, Smartphone, Store } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import { Case } from "@/components/sections/cases/case";
@@ -14,7 +14,8 @@ export const categories: TCategory[] = [
   { key: 'mobile', icon: Smartphone },
   { key: 'design', icon: Palette },
   { key: 'ecommerce', icon: Store },
-  { key: 'analytics', icon: Code }
+  { key: 'analytics', icon: ChartSpline },
+  { key: 'own', icon: Rocket }
 ];
 
 type Props = {

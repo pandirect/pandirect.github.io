@@ -2,7 +2,7 @@ import { getMessages } from 'next-intl/server';
 
 export async function getCaseStudies() {
   const messages = await getMessages();
-  return (messages as any).caseStudies as Array<TCase>;
+  return ((messages as any).caseStudies as TCase[]).sort((a, b) => b.priority - a.priority);
 }
 
 export async function getPreviewCaseStudies() {

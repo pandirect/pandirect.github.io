@@ -2,6 +2,7 @@ type TCase = {
   slug: string;
   title: string;
   tagline: string;
+  priority: number;
   card: {
     title: string;
     subtitle: string;
