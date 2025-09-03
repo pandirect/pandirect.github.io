@@ -3,12 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { ScrollFadeIn } from "@/components/scroll-fade-in";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
+import { Case } from "@/components/sections/cases/case";
 
 type Props = {
   cases: TCase[];
@@ -30,31 +27,7 @@ const FeaturedCasesClient: React.FC<Props> = ({ cases }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cases.map((item, index) => (
             <ScrollFadeIn key={index} delay={index * 100}>
-              <Link href={`/case-studies/${item.slug}`} className="block h-full">
-                <Card className="group h-full flex flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-1 bg-secondary/20 border-secondary">
-                  <div className="relative w-full h-56 overflow-hidden">
-                    <Image
-                      src={item.src}
-                      alt={item.title}
-                      data-ai-hint={item.hint}
-                      fill
-                      className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
-                    />
-                  </div>
-                  <CardContent className="p-6 flex flex-col flex-grow">
-                    <div className="flex-grow">
-                      <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-xl font-bold text-white mb-2">{item.card.title}</h3>
-                        <Badge variant="secondary" className="bg-primary/20 text-primary border-0 whitespace-nowrap">{item.category}</Badge>
-                      </div>
-                      <p className="text-gray-400 mb-4 text-sm">{item.card.subtitle}</p>
-                    </div>
-                    <div className="inline-flex items-center text-primary font-semibold group-hover:underline mt-auto pt-4 border-t border-secondary">
-                      {t('cases.buttons.show')}<ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
+              <Case item={item} />
             </ScrollFadeIn>
           ))}
         </div>

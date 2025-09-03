@@ -5,20 +5,19 @@ type TCase = {
   card: {
     title: string;
     subtitle: string;
-    result: string;
   };
-  description: string;
-  category: TCategoryKey;
-  projectType: string;
-  src: string;
-  hint: string;
-  technologies: string[];
-  client?: string;
-  industry: string;
-  websiteUrl?: string;
-  challenge: string;
-  solution: string;
-  results: string;
+  categories: TCategoryKey[];
+  detail: {
+    type: string;
+    image: string;
+    client?: string;
+    industry: string;
+    technologies: string[];
+    goal: string;
+    solution: string;
+    results: string;
+    resultUrl?: string;
+  };
   testimonial?: TTestimonial;
 };
 
