@@ -1,0 +1,1 @@
+export const YANDEX_ID = 104024809;
