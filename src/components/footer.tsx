@@ -1,10 +1,14 @@
 import Link from 'next/link';
-import {Linkedin, Send, Youtube} from 'lucide-react';
 import {Logo} from '@/components/logo';
 import {useTranslations} from "next-intl";
+import { servicesKeys } from "@/lib/constants";
 
 const Footer = () => {
     const t = useTranslations('common');
+
+    const services = servicesKeys.map((key) => ({
+        title: t(`services.items.${key}.title`),
+    }));
 
     return (
         <footer className="bg-black text-white">
@@ -15,17 +19,6 @@ const Footer = () => {
                         <p className="mt-4 text-sm text-gray-400">
                             {t(`footer.brand.slogan`)}
                         </p>
-                        {/*<div className="flex space-x-4 mt-6">*/}
-                        {/*    <Link href="#" className="text-gray-400 hover:text-primary transition-colors">*/}
-                        {/*        <Linkedin size={20}/>*/}
-                        {/*    </Link>*/}
-                        {/*    <Link href="#" className="text-gray-400 hover:text-primary transition-colors">*/}
-                        {/*        <Send size={20}/>*/}
-                        {/*    </Link>*/}
-                        {/*    <Link href="#" className="text-gray-400 hover:text-primary transition-colors">*/}
-                        {/*        <Youtube size={20}/>*/}
-                        {/*    </Link>*/}
-                        {/*</div>*/}
                     </div>
                     <div>
                         <h3 className="font-semibold text-white">
@@ -33,18 +26,17 @@ const Footer = () => {
                         </h3>
                         <ul className="mt-4 space-y-2">
                             <li>
-                                <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                                <Link href="/#about" className="text-gray-400 hover:text-white transition-colors text-sm">
                                     {t('footer.company.items.0')}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/case-studies"
-                                      className="text-gray-400 hover:text-white transition-colors text-sm">
+                                <Link href="/case-studies" className="text-gray-400 hover:text-white transition-colors text-sm">
                                     {t('footer.company.items.1')}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                                <Link href="/#contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                                     {t('footer.company.items.2')}
                                 </Link>
                             </li>
@@ -52,34 +44,16 @@ const Footer = () => {
                     </div>
                     <div>
                         <h3 className="font-semibold text-white">
-                            {t(`footer.services.title`)}
+                            {t(`footer.services`)}
                         </h3>
                         <ul className="mt-4 space-y-2">
-                            <li>
-                                <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                                    {t(`footer.services.items.0`)}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                                    {t(`footer.services.items.1`)}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                                    {t(`footer.services.items.2`)}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                                    {t(`footer.services.items.3`)}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                                    {t(`footer.services.items.4`)}
-                                </Link>
-                            </li>
+                            {(services.map(({ title }, index) => (
+                              <li key={index}>
+                                  <Link href="/#services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                                      {title}
+                                  </Link>
+                              </li>
+                            )))}
                         </ul>
                     </div>
                     <div>
