@@ -8,7 +8,7 @@ const Cta = () => {
 
   return (
     <section id="contact" className="section-padding bg-background">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 text-center max-w-[900] m-auto">
         <ScrollFadeIn>
           <div className="bg-secondary/20 rounded-2xl p-10 md:p-16 border border-secondary">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

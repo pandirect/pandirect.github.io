@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 interface ScrollFadeInProps {
   children: React.ReactNode;
   className?: string;
-  delay?: number; // delay in ms
+  delay?: number;
 }
 
 export const ScrollFadeIn = ({ children, className, delay = 0 }: ScrollFadeInProps) => {

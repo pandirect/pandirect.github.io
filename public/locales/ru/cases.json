@@ -15,7 +15,7 @@
       ],
       "detail": {
         "type": "Информационный сайт",
-        "image": "https://picsum.photos/600/500?random=7",
+        "image": "./spug.png",
         "client": "ООО «СтройПартнер-Юг»",
         "technologies": [
           "Next.js",
@@ -48,7 +48,7 @@
       },
       "detail": {
         "type": "Административная панель",
-        "image": "https://picsum.photos/600/500?random=8",
+        "image": "./karamida_admin.png",
         "client": "Karamida",
         "industry": "Логистика",
         "technologies": [
@@ -274,7 +274,7 @@
       },
       "detail": {
         "type": "Мобильное приложение",
-        "image": "https://picsum.photos/600/500?random=13",
+        "image": "./younet.png",
         "technologies": [
           "Flutter",
           "Nest.js",
