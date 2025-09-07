@@ -1,10 +1,15 @@
+"use client"
+
 import { Button } from '@/components/ui/button';
 import { ScrollFadeIn } from '@/components/scroll-fade-in';
 import { useTranslations } from 'next-intl';
 import Link from "next/link";
+import { useMetrica } from "@artginzburg/next-ym";
 
 const Cta = () => {
   const t = useTranslations('common');
+
+  const { reachGoal } = useMetrica();
 
   return (
     <section id="contact" className="section-padding bg-background">
@@ -17,7 +22,7 @@ const Cta = () => {
             <p className="text-light-gray max-w-2xl mx-auto mb-8">
               {t('cta.description')}
             </p>
-            <Link href="https://t.me/kanyushkova_m" target="_blank">
+            <Link href="https://t.me/kanyushkova_m" target="_blank" onClick={() => reachGoal('cta-click')}>
               <Button size="lg" className="btn-gradient text-lg px-8 py-6">
                 {t('cta.button')}
               </Button>
