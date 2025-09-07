@@ -15,7 +15,7 @@ const About = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <ScrollFadeIn>
                         <img
-                            src="./team.png"
+                            src="/team.png"
                             alt="Our Team"
                             data-ai-hint="team collaboration"
                             className="object-cover"
