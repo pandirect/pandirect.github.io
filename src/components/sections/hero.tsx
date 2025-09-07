@@ -1,4 +1,5 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ScrollFadeIn } from '../scroll-fade-in';
@@ -8,6 +9,7 @@ import { cn } from '@/lib/utils';
 import { Logo } from '../logo';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useMetrica } from "@artginzburg/next-ym";
 
 interface HeroProps {
   showContent?: boolean;
@@ -17,6 +19,9 @@ const Hero = ({ showContent = true }: HeroProps) => {
   const t = useTranslations('common');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { reachGoal } = useMetrica();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +69,7 @@ const Hero = ({ showContent = true }: HeroProps) => {
               ))}
             </nav>
             <div className="hidden md:block">
-              <Link href="https://t.me/kanyushkova_m" target="_blank">
+              <Link href="https://t.me/kanyushkova_m" target="_blank" onClick={() => reachGoal('cta-click')}>
                 <Button className="btn-gradient">{t('navigation.requestConsultation')}</Button>
               </Link>
             </div>
