@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import React from "react";
-import { MetrikaCounter } from "react-metrika";
+import { YandexMetricaProvider } from "@artginzburg/next-ym";
 import { YANDEX_ID } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -17,7 +17,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const locale = await getLocale();
   const messages = await getMessages();
 
@@ -32,11 +31,9 @@ export default async function RootLayout({
         <link rel="preload" href="https://mc.yandex.ru/metrika/tag.js" as="script"/>
       </head>
       <body className="font-body antialiased">
-      {children}
-      <Toaster/>
-      <MetrikaCounter
-        id={YANDEX_ID}
-        options={{
+      <YandexMetricaProvider
+        tagID={YANDEX_ID}
+        initParameters={{
           clickmap: true,
           trackHash: true,
           webvisor: true,
@@ -44,7 +41,10 @@ export default async function RootLayout({
           trackLinks: true,
           ecommerce: "dataLayer",
         }}
-      />
+      >
+        {children}
+      </YandexMetricaProvider>
+      <Toaster/>
       </body>
       </html>
     </NextIntlClientProvider>
