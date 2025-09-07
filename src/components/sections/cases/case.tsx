@@ -20,8 +20,10 @@ const Case: React.FC<Props> = ({ item }) => {
           <Image
             src={item.detail.image}
             alt={item.title}
-            fill
-            className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
+            width="100"
+            height="100"
+            className="w-full transition-transform duration-500 ease-in-out group-hover:scale-110"
+            style={{height: "auto !important"}}
           />
           <Badge
             className="bg-primary/20 text-primary border-0 whitespace-nowrap absolute top-4 right-4">{item.detail.type}</Badge>

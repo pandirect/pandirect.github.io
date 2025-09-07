@@ -27,7 +27,7 @@ const Workflow = () => {
             <p className="text-light-gray max-w-2xl mx-auto">{t('workflow.description')}</p>
           </ScrollFadeIn>
 
-          <div className="grid md:grid-cols-3 gap-12 items-center">
+          <div className="grid md:grid-cols-3 gap-12 items-center max-w-[900px] m-auto">
             <ScrollFadeIn className="md:col-span-1 flex justify-center md:sticky md:top-24">
               <div className="relative w-full">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:flex md:flex-col md:gap-8 md:space-y-0">
