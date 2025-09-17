@@ -17,5 +17,5 @@ export async function getFeedbacks() {
   return cases
     .map(({ testimonial }) => testimonial)
     .filter((value) => value != null)
-    .slice(0, 3);
+    .slice(0, 6);
 }
