@@ -25,7 +25,7 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white">
             <div className="container mx-auto px-4 py-12 md:py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="md:col-span-1">
                         <Logo/>
                         <p className="mt-4 text-sm text-gray-400">
@@ -68,12 +68,12 @@ const Footer = () => {
                             )))}
                         </ul>
                     </div>
-                    <div>
+                    <div className="min-w-0">
                         <h3 className="font-semibold text-white">{t(`footer.contact.title`)}</h3>
                         <ul className="mt-4 space-y-2 text-sm text-gray-400">
                             <li>
                                 <a href={`mailto:${t('footer.contact.mail')}`}
-                                   className="hover:text-white transition-colors">
+                                   className="hover:text-white transition-colors break-words">
                                     {t(`footer.contact.mail`)}
                                 </a>
                             </li>
