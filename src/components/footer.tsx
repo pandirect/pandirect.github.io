@@ -15,6 +15,7 @@ const formatPhone = (phone: string) => {
 
 const Footer = () => {
     const t = useTranslations('common');
+    const tLegal = useTranslations('legal.footer');
     const phone = t('footer.contact.phone');
 
     const services = servicesKeys.map((key) => ({
@@ -86,7 +87,17 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-8 border-t border-gray-800 pt-6 flex flex-col md:flex-row md:justify-between md:items-start gap-4 text-sm text-gray-500">
-                    <p className="shrink-0">&copy; {new Date().getFullYear()} {t(`footer.copyright`)}</p>
+                    <div className="flex flex-col gap-2 shrink-0">
+                        <p>&copy; {new Date().getFullYear()} {t(`footer.copyright`)}</p>
+                        <div className="flex flex-wrap gap-x-4 gap-y-1">
+                            <Link href="/cookies/" className="hover:text-white transition-colors">
+                                {tLegal('cookies')}
+                            </Link>
+                            <Link href="/privacy/" className="hover:text-white transition-colors">
+                                {tLegal('privacy')}
+                            </Link>
+                        </div>
+                    </div>
                     <div className="flex flex-col gap-y-1 md:text-right">
                         <span>{t('footer.legal.name')}</span>
                         <span>ИНН {t('footer.legal.inn')}</span>
