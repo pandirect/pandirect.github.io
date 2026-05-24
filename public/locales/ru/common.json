@@ -162,9 +162,16 @@
         ]
       },
       "services": "Услуги",
-      "contact": {
+       "contact": {
         "title": "Контакты",
-        "mail": "contact@pandirect.ru"
+        "mail": "pechischev.vladimir@yandex.ru",
+        "phone": "+79933891059"
+      },
+      "legal": {
+        "name": "ИП Печищев Владимир Алексеевич",
+        "inn": "120602759094",
+        "ogrnip": "320121500005408",
+        "address": "424004, г.Йошкар-Ола, ул.Первомайская, д.49"
       },
       "copyright": "Все права защищены."
     }

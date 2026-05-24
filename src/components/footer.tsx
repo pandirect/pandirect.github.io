@@ -3,8 +3,19 @@ import {Logo} from '@/components/logo';
 import {useTranslations} from "next-intl";
 import { servicesKeys } from "@/lib/constants";
 
+const formatPhone = (phone: string) => {
+    const digits = phone.replace(/\D/g, '');
+
+    if (digits.length === 11 && digits.startsWith('7')) {
+        return `+7 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7, 9)}-${digits.slice(9, 11)}`;
+    }
+
+    return phone;
+};
+
 const Footer = () => {
     const t = useTranslations('common');
+    const phone = t('footer.contact.phone');
 
     const services = servicesKeys.map((key) => ({
         title: t(`services.items.${key}.title`),
@@ -65,11 +76,23 @@ const Footer = () => {
                                     {t(`footer.contact.mail`)}
                                 </a>
                             </li>
+                            <li>
+                                <a href={`tel:${phone}`}
+                                   className="hover:text-white transition-colors">
+                                    {formatPhone(phone)}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div className="mt-8 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
-                    <p>&copy; {new Date().getFullYear()} {t(`footer.copyright`)}</p>
+                <div className="mt-8 border-t border-gray-800 pt-6 flex flex-col md:flex-row md:justify-between md:items-start gap-4 text-sm text-gray-500">
+                    <p className="shrink-0">&copy; {new Date().getFullYear()} {t(`footer.copyright`)}</p>
+                    <div className="flex flex-col gap-y-1 md:text-right">
+                        <span>{t('footer.legal.name')}</span>
+                        <span>ИНН {t('footer.legal.inn')}</span>
+                        <span>ОГРНИП {t('footer.legal.ogrnip')}</span>
+                        {t('footer.legal.address') && <span>{t('footer.legal.address')}</span>}
+                    </div>
                 </div>
             </div>
         </footer>
