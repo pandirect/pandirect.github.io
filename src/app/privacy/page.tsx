@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('legal.privacy');
 
   return {
-    title: `${t('title')} | Pandirect`,
+    title: `${t('shortTitle')} | Pandirect`,
   };
 }
 
